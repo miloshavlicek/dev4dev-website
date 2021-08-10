@@ -1,0 +1,10 @@
+{
+  "app": {
+    "title": "DEV4DEV komunita"
+  },
+  "pages": {
+    "home": {
+      "title": "Úvod"
+    }
+  }
+}
