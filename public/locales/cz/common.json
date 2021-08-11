@@ -1,10 +1,21 @@
 {
   "app": {
-    "title": "DEV4DEV komunita"
+    "title": "DEV4DEV komunita",
+    "titleShort": "DEV4DEV"
   },
   "pages": {
     "home": {
-      "title": "Úvod"
+      "title": "Úvod",
+      "joinCommunity": "Připoj se k soukromé komunitě českých a slovenských vývojářů!",
+      "goToFbGroup": "Facebook skupina",
+      "goToFbPage": "Facebook stránka"
+    }
+  },
+  "components": {
+    "footer": {
+      "reportIssue": "Nahlásit připomínku",
+      "editCode": "edit(code);",
+      "developedBy": "\"Developed with {❤} by {community} since {2021}.\""
     }
   }
 }
