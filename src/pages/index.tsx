@@ -29,7 +29,7 @@ export default function Home(props: any) {
     return (
         <Content>
             <Head>
-                <title>{title + " | " + t("app.title")}</title>
+                <title>{title}</title>
             </Head>
 
             <div className="notice-line">
