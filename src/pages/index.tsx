@@ -2,6 +2,8 @@ import { faFacebookF } from "@fortawesome/free-brands-svg-icons/faFacebookF";
 import { faUsers } from "@fortawesome/free-solid-svg-icons/faUsers";
 import { useTranslation } from "next-i18next";
 import Head from "next/head";
+import Image from "next/image";
+import { Carousel } from "react-bootstrap";
 import Content from "../components/uni/Content/Content";
 import ContentBox from "../components/uni/Content/ContentBox";
 import LinkExternal from "../components/uni/LinkExternal";
@@ -11,6 +13,18 @@ export default function Home(props: any) {
     const {t} = useTranslation();
 
     const title = t("app.title");
+
+    const carouselData: {
+        imgSrc: string,
+        alt?: string,
+        title?: string,
+        text?: string
+    }[] = [];
+
+    carouselData.push({
+        imgSrc: "/img/dev4dev_cover.jpg",
+        alt: "Developers for developers",
+    });
 
     return (
         <Content>
@@ -27,10 +41,10 @@ export default function Home(props: any) {
             <ContentBox className="text-center">
                 <div className="row">
                     <div className="col-md-8 text-start" style={{fontSize: "1.5em"}}>
-                        <ul className={"m-2"} style={{listStyleType: "none"}}>
-                            <li>🤙 Zkušení developeři z Česka a Slovenska</li>
-                            <li>🤙 Rady, tipy, triky</li>
-                            <li>🤙 Rychlá vzájemná pomoc s řešením problémů</li>
+                        <ul className="m-2" style={{listStyleType: "none"}}>
+                            <li>🤙 {t("pages.home.li1")}</li>
+                            <li>🤙 {t("pages.home.li2")}</li>
+                            <li>🤙 {t("pages.home.li3")}</li>
                         </ul>
                     </div>
                     <div className="col-md-4">
@@ -49,8 +63,37 @@ export default function Home(props: any) {
                         </LinkExternal>
                     </div>
                 </div>
-            </ContentBox>
 
+                <div className="pt-3">
+                    <Carousel controls={carouselData.length > 1} indicators={carouselData.length > 1}>
+                        {
+                            carouselData.map((carouselItem, i) => (
+                                <Carousel.Item key={i}>
+                                    <Image
+                                        src={carouselItem.imgSrc}
+                                        alt={carouselItem.alt}
+                                        className="d-block w-100"
+                                        layout="responsive"
+                                        width={1110}
+                                        height={624}
+                                    />
+                                    <Carousel.Caption>
+                                        {
+                                            carouselItem.title &&
+                                            <h3>{carouselItem.title}</h3>
+                                        }
+                                        {
+                                            carouselItem.text &&
+                                            <p>{carouselItem.text}</p>
+                                        }
+                                    </Carousel.Caption>
+                                </Carousel.Item>
+                            ))
+                        }
+                    </Carousel>
+                </div>
+
+            </ContentBox>
         </Content>
     )
 }
