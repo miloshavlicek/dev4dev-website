@@ -1,3 +1,5 @@
+import { faUsers } from "@fortawesome/free-solid-svg-icons/faUsers";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { i18n, useTranslation } from "next-i18next";
 import Link from "next/link"
 import { NextRouter, useRouter } from "next/router";
@@ -16,23 +18,29 @@ export default function Header() {
     const menuItems = (new MenuItemsRepository()).getAll();
 
     return (
-        <header className="p-3 bg-dark text-white">
-            <div className="container">
-                <div className="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-                    <ul className="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0 mr-auto">
-                        {
-                            menuItems.map(menuItem => (
-                                <li key={menuItem.title}>
-                                    <Link href={menuItem.url || "#"}>
-                                        <a className="nav-link px-2 text-white">
-                                            {t(menuItem.title)}
-                                        </a>
-                                    </Link>
-                                </li>
-                            ))
-                        }
-                    </ul>
-                </div>
+        <header className="py-3 bg-primary border-bottom text-white">
+            <div className="container d-flex flex-wrap justify-content-center">
+                <Link href="/">
+                    <a className="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+                        <FontAwesomeIcon icon={faUsers} className="me-2" />
+
+                        <span className="fs-4">{t("app.titleShort")}</span>
+                    </a>
+                </Link>
+
+                <ul className="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+                    {
+                        menuItems.map(menuItem => (
+                            <li key={menuItem.title} className="nav-item">
+                                <Link href={menuItem.url || "#"}>
+                                    <a className="nav-link px-2 text-white">
+                                        {t(menuItem.title)}
+                                    </a>
+                                </Link>
+                            </li>
+                        ))
+                    }
+                </ul>
             </div>
         </header>
     )

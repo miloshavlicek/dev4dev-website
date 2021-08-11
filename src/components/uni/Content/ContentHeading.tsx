@@ -12,7 +12,7 @@ export default function ContentHeading(props: Props) {
     let icon = <></>
 
     if (props.faIcon) {
-        icon = <FontAwesomeIcon icon={props.faIcon} className={"mr-3"}></FontAwesomeIcon>;
+        icon = <FontAwesomeIcon icon={props.faIcon} className={"me-3"}></FontAwesomeIcon>;
     }
 
     return (
