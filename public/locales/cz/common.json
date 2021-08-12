@@ -12,6 +12,13 @@
       "li1": "Zkušení developeři/-rky z Česka a Slovenska",
       "li2": "Rady, tipy, triky",
       "li3": "Rychlá vzájemná pomoc s řešením problémů"
+    },
+    "contact": {
+      "title": "Kontakty",
+      "fbMessenger": "Facebook Messenger"
+    },
+    "jobs": {
+      "title": "Nabídky práce"
     }
   },
   "components": {

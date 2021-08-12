@@ -27,13 +27,17 @@ module.exports = {
                     safelist: {
                         standard: ["html", "body"],
                         greedy: [
-                            /bg-(primary|secondary|success|info|warning|danger|light|dark)$/,
-                            /text-(primary|secondary|success|info|warning|danger|light|dark|white)$/,
-                            /badge$/,
-                            /badge-.*$/,
                             /card-.*$/,
+                            /badge$/,
+                            /btn$/,
+                            /btn-.*$/,
+                            /bg-.*$/,
+                            /badge-.*$/,
+                            /d-.*$/,
                             /h[123456]$/,
-                            /m[setb]-*$/,
+                            /p[setb]?-.*$/,
+                            /m[setb]?-.*$/,
+                            /text-.*$/,
                             /tooltip/
                         ]
                     }

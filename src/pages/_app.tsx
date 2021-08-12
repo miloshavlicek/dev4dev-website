@@ -15,6 +15,7 @@ function MyApp({Component, pageProps}: AppProps) {
             <Head>
                 <title>{t("app.title")}</title>
                 <meta property="og:image" content={"https://dev4dev.cz/img/dev4dev_cover.png"}/>
+                <meta property="og:description" content={t("pages.home.joinCommunity")}/>
             </Head>
 
             <Header/>

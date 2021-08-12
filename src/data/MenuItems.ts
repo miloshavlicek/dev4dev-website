@@ -9,10 +9,10 @@ export interface IMenuItem {
 }
 
 const data: IMenuItem[] = [
-    // {
-    //     title: "pages.home.title",
-    //     url: "/"
-    // }
+    {
+        title: "pages.contact.title",
+        url: "/contact"
+    }
 ];
 
 

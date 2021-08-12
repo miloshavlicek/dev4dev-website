@@ -25,7 +25,7 @@ export default function LinkInternal(props: Props) {
 
     const title = data.title ?? data.url;
     const icon = data.faIcon ? (
-        <FontAwesomeIcon icon={data.faIcon} className={title.length ? "me-2" : ""}/>
+        <FontAwesomeIcon icon={data.faIcon} className={title.length ? "me-2" : ""} />
     ) : undefined;
 
     const titleSubEl = data.titleSub ? <> <small>{data.titleSub}</small></> : undefined;
