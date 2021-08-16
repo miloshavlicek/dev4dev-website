@@ -7,6 +7,7 @@ import Link from "next/link";
 import Content from "../../components/uni/Content/Content";
 import ContentBox from "../../components/uni/Content/ContentBox";
 import ContentHeading from "../../components/uni/Content/ContentHeading";
+import LinkExternal from "../../components/uni/LinkExternal";
 import { StaticProps } from "../../tools/Helpers/TranslationHelper";
 
 export default function Contact(props: any) {
@@ -42,12 +43,12 @@ export default function Contact(props: any) {
                     <FontAwesomeIcon icon={faPhone} className="me-2"/>
                     +420 602 699 269
                 </a>
-                <a
-                    href="https://m.me/developers4developers"
+                <LinkExternal
+                    url="https://m.me/developers4developers"
+                    faIcon={faFacebookMessenger}
                     className="btn btn-lg btn-primary d-inline-block m-2">
-                    <FontAwesomeIcon icon={faFacebookMessenger} className="me-2"/>
                     {t("pages.contact.fbMessenger")}
-                </a>
+                </LinkExternal>
             </ContentBox>
         </Content>
     )
