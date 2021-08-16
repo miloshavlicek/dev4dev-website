@@ -10,6 +10,10 @@ export interface IMenuItem {
 
 const data: IMenuItem[] = [
     {
+        title: "pages.communities.title",
+        url: "/communities"
+    },
+    {
         title: "pages.contact.title",
         url: "/contact"
     }

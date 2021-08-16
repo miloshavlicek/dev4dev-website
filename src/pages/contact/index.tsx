@@ -9,7 +9,7 @@ import ContentBox from "../../components/uni/Content/ContentBox";
 import ContentHeading from "../../components/uni/Content/ContentHeading";
 import { StaticProps } from "../../tools/Helpers/TranslationHelper";
 
-export default function Home(props: any) {
+export default function Contact(props: any) {
     const {t} = useTranslation();
 
     const title = t("pages.contact.title");
@@ -43,10 +43,10 @@ export default function Home(props: any) {
                     +420 602 699 269
                 </a>
                 <a
-                    href="https://www.facebook.com/Developers-for-Developers-113272867624886/"
+                    href="https://m.me/developers4developers"
                     className="btn btn-lg btn-primary d-inline-block m-2">
                     <FontAwesomeIcon icon={faFacebookMessenger} className="me-2"/>
-                    {t('pages.contact.fbMessenger')}
+                    {t("pages.contact.fbMessenger")}
                 </a>
             </ContentBox>
         </Content>

@@ -64,7 +64,7 @@ export default function Home(props: any) {
                         </LinkExternal>
 
                         <LinkExternal
-                            url="https://www.facebook.com/Developers-for-Developers-113272867624886"
+                            url="https://discord.gg/ED4TXGra"
                             faIcon={faDiscord}
                             className="btn btn-primary btn-lg m-1 d-block">
                             {t("pages.home.goToDiscord")}
@@ -107,8 +107,7 @@ export default function Home(props: any) {
                                 src="https://discord.com/widget?id=875859287916834828&theme=dark"
                                 width="350"
                                 height="500"
-                                style={{"max-width": "100%"}}
-                                allowTransparency={true}
+                                style={{maxWidth: "100%", backgroundColor: "transparent"}}
                                 frameBorder="0"
                                 sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"/>
                         </div>

@@ -15,7 +15,6 @@ function onLangChange(lang: string, router: NextRouter) {
 
 export default function Header() {
     const {t} = useTranslation();
-    const router = useRouter();
 
     const menuItems = (new MenuItemsRepository()).getAll();
 

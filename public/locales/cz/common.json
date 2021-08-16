@@ -20,6 +20,16 @@
     },
     "jobs": {
       "title": "Nabídky práce"
+    },
+    "communities": {
+      "title": "Komunity",
+      "p1": "Seznam komunit zaměřených na vývojáře",
+      "website": "Webová stránka",
+      "facebook": "Facebook stránka",
+      "facebookGroup": "Facebook skupina",
+      "twitter": "Twitter",
+      "discord": "Discord komunita",
+      "slack": "Slack"
     }
   },
   "components": {
