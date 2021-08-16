@@ -41,14 +41,6 @@ export default function Header() {
                             </li>
                         ))
                     }
-                    <li className="nav-item">
-                        <LinkExternal
-                            className="nav-link px-2 text-white"
-                            url="https://www.facebook.com/Developers-for-Developers-113272867624886/jobs/">
-                            {t("pages.jobs.title")}
-                            <sup><FontAwesomeIcon icon={faExternalLinkAlt} className="ms-1"/></sup>
-                        </LinkExternal>
-                    </li>
                 </ul>
             </div>
         </header>

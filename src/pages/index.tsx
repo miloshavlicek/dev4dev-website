@@ -50,7 +50,7 @@ export default function Home(props: any) {
                     </div>
                     <div className="col-md-4">
                         <LinkExternal
-                            url="https://www.facebook.com/Developers-for-Developers-113272867624886"
+                            url="https://www.facebook.com/developers4developers"
                             faIcon={faFacebookF}
                             className="btn btn-dark btn-lg m-1 d-block">
                             {t("pages.home.goToFbPage")}
