@@ -1,3 +1,4 @@
+import { faDiscord } from "@fortawesome/free-brands-svg-icons/faDiscord";
 import { faFacebookF } from "@fortawesome/free-brands-svg-icons/faFacebookF";
 import { faUsers } from "@fortawesome/free-solid-svg-icons/faUsers";
 import { useTranslation } from "next-i18next";
@@ -49,6 +50,13 @@ export default function Home(props: any) {
                     </div>
                     <div className="col-md-4">
                         <LinkExternal
+                            url="https://www.facebook.com/Developers-for-Developers-113272867624886"
+                            faIcon={faFacebookF}
+                            className="btn btn-dark btn-lg m-1 d-block">
+                            {t("pages.home.goToFbPage")}
+                        </LinkExternal>
+
+                        <LinkExternal
                             url="https://www.facebook.com/groups/3642352659323878"
                             faIcon={faUsers}
                             className="btn btn-primary btn-lg m-1 d-block">
@@ -57,40 +65,54 @@ export default function Home(props: any) {
 
                         <LinkExternal
                             url="https://www.facebook.com/Developers-for-Developers-113272867624886"
-                            faIcon={faFacebookF}
-                            className="btn btn-dark btn-lg m-1 d-block">
-                            {t("pages.home.goToFbPage")}
+                            faIcon={faDiscord}
+                            className="btn btn-primary btn-lg m-1 d-block">
+                            {t("pages.home.goToDiscord")}
                         </LinkExternal>
                     </div>
                 </div>
 
                 <div className="pt-3">
-                    <Carousel controls={carouselData.length > 1} indicators={carouselData.length > 1}>
-                        {
-                            carouselData.map((carouselItem, i) => (
-                                <Carousel.Item key={i}>
-                                    <Image
-                                        src={carouselItem.imgSrc}
-                                        alt={carouselItem.alt}
-                                        className="d-block w-100"
-                                        layout="responsive"
-                                        width={1110}
-                                        height={624}
-                                    />
-                                    <Carousel.Caption>
-                                        {
-                                            carouselItem.title &&
-                                            <h3>{carouselItem.title}</h3>
-                                        }
-                                        {
-                                            carouselItem.text &&
-                                            <p>{carouselItem.text}</p>
-                                        }
-                                    </Carousel.Caption>
-                                </Carousel.Item>
-                            ))
-                        }
-                    </Carousel>
+                    <div className="row">
+                        <div className="col-md-8">
+                            <Carousel controls={carouselData.length > 1} indicators={carouselData.length > 1}>
+                                {
+                                    carouselData.map((carouselItem, i) => (
+                                        <Carousel.Item key={i}>
+                                            <Image
+                                                src={carouselItem.imgSrc}
+                                                alt={carouselItem.alt}
+                                                className="d-block w-100"
+                                                layout="responsive"
+                                                width={1110}
+                                                height={624}
+                                            />
+                                            <Carousel.Caption>
+                                                {
+                                                    carouselItem.title &&
+                                                    <h3>{carouselItem.title}</h3>
+                                                }
+                                                {
+                                                    carouselItem.text &&
+                                                    <p>{carouselItem.text}</p>
+                                                }
+                                            </Carousel.Caption>
+                                        </Carousel.Item>
+                                    ))
+                                }
+                            </Carousel>
+                        </div>
+                        <div className="col-md-4 d-none d-md-block">
+                            <iframe
+                                src="https://discord.com/widget?id=875859287916834828&theme=dark"
+                                width="350"
+                                height="500"
+                                style={{"max-width": "100%"}}
+                                allowTransparency={true}
+                                frameBorder="0"
+                                sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"/>
+                        </div>
+                    </div>
                 </div>
 
             </ContentBox>
