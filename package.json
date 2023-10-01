@@ -24,7 +24,7 @@
     "next-sitemap": "^1.6.173",
     "node-sass": "^5.0.0",
     "postcss-flexbugs-fixes": "^5.0.2",
-    "postcss-preset-env": "^6.7.0",
+    "postcss-preset-env": "^9.1.4",
     "pwa-asset-generator": "^4.3.6",
     "react": "17.0.2",
     "react-bootstrap": "^2.0.0-beta.6",
